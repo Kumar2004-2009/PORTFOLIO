@@ -1,0 +1,379 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    background-color: black;
+}
+.main{
+    height: 95vh;
+    background: url("assets/bg.jpg");
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* background-size: max(1200px 100vw); */
+    border-bottom: 5.5px solid rgb(57, 55, 55);
+}
+.main .box{
+    height: 95vh;
+    width: 100%;
+    opacity: 0.69;
+    background-color: black;
+    position: absolute;
+    top: 0;
+}
+nav{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    max-width: 60vw;
+    justify-content: space-between;
+    height: 62px;
+    position: relative;
+}
+span img{
+    margin-top: 3rem;
+    width: 163px;
+    position: relative;
+    z-index: 10;
+}
+.hero{
+    font-family: 'Martel Sans',sans-serif;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    gap: 23px;
+    padding: 0px 30px;
+    
+}
+
+.hero> :first-child{
+    font-weight: 900;
+    font-size: 49px;
+    text-align: center;
+}
+.hero> :nth-child(2){
+    font-weight: 400;
+    font-size: 26px;
+    text-align: center;
+}
+.hero> :nth-child(3){
+    font-weight: 400;
+    font-size: 22px;
+    text-align: center;
+}
+.btn{
+    font-weight: 500;
+    background-color: white;
+    position: relative;
+    border-radius: 3px;
+    z-index: 10;
+    cursor: pointer;
+    margin-right: 13px;    
+}
+.red-btn{
+    background-color: red;
+    color: white;
+    padding: 9px 15px;
+    font-size: 27px;
+    border-radius: 6px;
+}
+.main input{
+    padding: 12px 25px;
+    font-size: 22px;
+    border-radius: 5px;
+    background-color: rgba(23,23,23,0.7);
+    border: 4px rgb(255, 255, 255);
+    color: white;
+}
+.btn-red-sm{
+    background-color: red;
+    color: white;
+    padding: 0.39rem 1rem ;
+    font-size: 15px;
+}
+.none{
+    margin-top: 3rem;
+    background-color: rgba(23, 23, 23, 0.429);
+    color: white;
+    font-size: 20px;
+    padding: 0.23rem 1.5rem;
+}
+
+.first{
+    display: flex;
+    justify-content: center;
+    
+    margin: 60px auto;
+    max-width: 70%;
+    color: white;
+    align-items: center;
+    border-bottom-width: 5rem;
+    border-bottom: 5.5px solid rgb(57, 55, 55);
+}
+
+
+
+.secimg{
+    position: relative;
+}
+.secimg img{
+    width: 555px;
+    position: relative;
+    z-index: 10;
+}
+.secimg video{
+    position: absolute;
+    top: 51px;
+    width: 555px;
+}
+section.first > div{
+    display: flex;
+    flex-direction: column;
+    padding: 34px 0;
+}
+.first >div:first-child{
+    font-size: 55px;
+    font-weight: bolder;
+}
+.first >div  :nth-child(2){
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.second >div :first-child{
+    font-size: 53px;
+    font-weight: bolder;
+}
+.second >div  :nth-child(2){
+    font-size: 30px;
+    font-weight: 700;
+}
+.faq{
+    padding: 25px;
+    background-color: black;
+    color: white;
+}
+.faqbox{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(49, 49, 49);
+    font-size: 30px;
+    padding: 20px;
+    color: white;
+    max-width:70%;
+    margin: 34px auto;
+    cursor: pointer;
+}
+.faqbox img{
+    width: 34px;
+    filter: invert(1);
+    
+}
+.faq :hover{
+    background-color: rgb(110, 108, 108);
+}
+.faq2 h2{
+    text-align: center;
+    font-size: 55px;
+    font-weight: bolder;
+}
+.faq2{
+    padding: 2px;
+    background-color: black;
+    color: white;
+}
+.hero2{
+    font-family: 'Martel Sans',sans-serif;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    gap: 23px;
+    padding: 0px 30px;
+    margin-bottom: 3rem;
+    
+}
+.hero2> :nth-child(1){
+    font-weight: 400;
+    font-size: 22px;
+    text-align: center;
+}
+.hero2 input{
+    padding: 11px 25px;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: rgba(23,23,23,0.7);
+    border: 4px rgb(255, 255, 255);
+    color: white;
+}
+.red-btnn{
+    background-color: red;
+    color: white;
+    padding: 9px 15px;
+    font-size: 20px;
+    border-radius: 6px;
+}
+.sep{
+    margin-top: 80px;
+    width: 1592px;
+    border-bottom: 8px solid rgb(78, 77, 77);
+}
+footer{
+    border-top: 7px solid rgb(79, 77, 77);
+    color: rgb(162, 158, 158);
+    max-width: 90vw;
+    margin: auto;
+}
+footer .question{
+    padding-bottom: 2rem;
+    padding-top: 2.7rem;
+}
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* margin-bottom: 4px;    */
+}
+
+.footer-item{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+.footer-item a{
+    color: rgb(192, 189, 189);
+    font-size: 17px;
+}
+.nonee{
+    margin-top: 2rem;
+    background-color: rgba(23, 23, 23, 0.429);
+    color: white;
+    font-size: 20px;
+    padding-left: 0.8rem;
+    padding-right: 2rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    margin-bottom: 70px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+@media screen and (max-width: 1372px) and (min-width: 978px) {
+    .first{
+        display: flex;
+        flex-direction: column;
+    }
+    .hero> :first-child{
+        font-size: 35px;
+    }
+    .first >div:first-child{
+        font-size: 40px;
+    }
+    .first >div  :nth-child(2){
+        font-size: 22px;
+    }
+    .second >div :first-child{
+        font-size: 42px;
+    }
+    .second >div  :nth-child(2){
+        font-size: 22px;
+    }
+    .footer{
+        grid-template-columns: 1fr 1fr 1fr;
+        /* margin-bottom: 4px;    */
+    }
+    .faq2 h2{
+        font-size: 45px;
+    }
+}
+@media screen and (max-width: 978px){
+    .first{
+        display: flex;
+        flex-direction: column;
+    }
+    .hero> :first-child{
+        font-size: 35px;
+    }
+    .first >div:first-child{
+        font-size: 40px;
+    }
+    .first >div  :nth-child(2){
+        font-size: 22px;
+    }
+    .second >div :first-child{
+        font-size: 42px;
+    }
+    .second >div  :nth-child(2){
+        font-size: 22px;
+    }
+    .faq2 h2{
+        font-size: 38px;
+    }
+    .footer{
+        grid-template-columns: 1fr 1fr;
+        /* margin-bottom: 4px;    */
+    }
+    .secimg img{
+        width: 500px;
+    }
+    .secimg video{
+        width: 500px;
+    }
+    .main input{
+        padding-top: 13px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 9px;
+        font-size: 15px;
+    }
+    .red-btn{
+        padding: 8px 12px;
+        font-size: 20px;
+        
+    }
+    
+}
+@media screen and (max-width: 713px) {
+    .none{
+        z-index: -1;
+    }
+    .btn-red-sm{
+        z-index: -1;
+    }
+    span img{
+        left: 5.8rem;
+    }
+}
+@media screen and (max-width: 583px){
+    span img{
+        left: 4rem;
+    }
+    .secimg img{
+        width: 355px;
+    }
+    .secimg video{
+        width: 355px;
+    }
+}
+@media screen and (max-width: 485px){
+    span img{
+        left: 2.6rem;
+    }
+}
+@media screen and (max-width: 400px){
+    span img{
+        left: 2.2rem;
+    }
+    
+}
+
