@@ -1,11 +1,50 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
-    background-color: rgb(9, 2, 52);
+    background-color:#f7efc5;
     color: white;
     font-family: "Poppins", sans-serif;
+}
+body.dark{
+    background-color: rgb(9, 2, 52);
+}
+.label{
+    height:26px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #111;
+    border-radius: 50px;
+    padding: 5px;
+    position: relative;
+}
+.checkbox{
+    opacity: 0;
+    position: absolute;
+}
+
+.fa-moon-o {
+    color: #f1c40f;
+}
+.fa-sun-o{
+    color: #f39c12;
+}
+.ball{
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+.checkbox:checked + .label .ball {
+    transform: translateX(24px);
 }
 div.sticky{
     width: 100%;
@@ -36,6 +75,9 @@ a{
 nav ul li a:hover{
     color: rgb(148, 148, 204);
 }
+.brightness-icon{
+    margin-left: 20px;
+}
 .leftside{
     margin: 0 180px;
     font-size: 37px;
@@ -63,7 +105,8 @@ nav ul li a:hover{
 }
 
 .leftsec{
-    
+    /* change in color */
+    color: #111;
     margin-left: 180px;
     font-size: 3.6rem;
     font-weight: 600;
@@ -72,6 +115,9 @@ nav ul li a:hover{
     position: relative;
     animation-name: trial;
     animation-duration: 1.7s;
+}
+body.dark .leftsec{
+    color: #fff;
 }
 @keyframes trial {
     0%{
@@ -92,26 +138,43 @@ nav ul li a:hover{
     margin-right: 270px;
 }
 .purple{
-    color: blueviolet;
+    /* change in color */
+    color: blue;
 }
 .blue{
-    color: aqua;
+    /* change in color */
+    color: #ebc922;
 }
 #element{
-    color: blueviolet;
+    /* change in color */
+    color: blue;
 }
 .second{
     gap: 10rem;
     display: flex;
     
 }
+body.dark .purple{
+    color: blueviolet;
+}
+body.dark .blue{
+    color: aqua;
+}
+body.dark #element{
+    color: blueviolet;
+}
 .rightcont{
+    /* change in color */
+    color: #111; 
     font-size: 55px;
     font-weight: 600;
     max-width: 80vw;
     margin-top: 120px;
     /* margin-bottom: 200px; */
     margin-right: 120px;  
+}
+body.dark .rightcont{
+    color: #fff;
 }
 .leftimg{
     margin-top: 120px;
@@ -142,6 +205,13 @@ main .hr2{
     margin-left: 25px;
     margin-right: 25px;
 }
+/* CHANGE IN COLOR */
+.head{
+    color: black;
+}
+body.dark .head{
+    color: white;
+}
 .container1{
     display: flex;
     gap: 40px;
@@ -150,11 +220,17 @@ main .hr2{
     margin-left: 55px;
     width: 23.3%;
     height: 550px;
-    background-color: rgb(7, 2, 43);
+    background-color: #eed867;
     border-radius: 13px;
     transition: 0.4s;
     -webkit-transition-duration: 0.4s;
     display: inline-block;
+    border: 5px solid #937c07;
+    color: black;
+}
+body.dark .box1{
+    background-color: rgb(7, 2, 43);
+    color: #fff;
     border: 5px solid rgb(33, 33, 144);
 }
 .box1:hover{
@@ -196,16 +272,23 @@ main .hr2{
             font-size: 19px;
             font-weight: 600;
             padding: 10px 14px;
-            border: 3px solid rgb(5, 5, 116);
+            border: 3px solid #4d4002;
             border-radius: 20px;
-            background-color: aqua;
+            background-color: #f9d20c;
             cursor: pointer;
             transition-duration: 0.4s;
             -webkit-transition-duration: 0.4s;
             display: inline-block;
             
         }
+        body.dark .but1{
+            background-color: aqua;
+            border: 3px solid rgb(5, 5, 116);
+        }
         .but1:hover{
+            box-shadow: 2px 3px 7px #917f2a ;
+        }
+        body.dark .but1:hover{
             box-shadow: 2px 3px 7px aqua ;
         }
         .box1 .image{
@@ -221,8 +304,13 @@ main .hr2{
     margin: 10px 10px;
     width: 1765px;
     height: 270px;
-    background-color: rgb(6, 0, 40);
-    color: white;
+    /* change */
+    background-color: #dacd93;
+    color: black;
+}
+body.dark .footer{
+    background-color:  rgb(6, 0, 40);
+    color: #fff;
 }
 .foot-links{
     /* margin-top: 70px; */
@@ -243,7 +331,18 @@ main .hr2{
 }
 
 .first-link a , .second-link a , .third-link a{
+    /* change in color */
+    color: black;
     font-size: 17px;
+}
+body.dark .first-link a{
+    color: #fff;
+}
+body.dark .second-link a{
+    color: #fff;
+}
+body.dark .third-link a{
+    color: #fff;
 }
 .footer p{
     margin-top: 85px;
@@ -252,6 +351,10 @@ main .hr2{
 }
 .heading a{
     font-size: 38px;
+    color: black;
+}
+body.dark .heading a{
+    color: #fff;
 }
 .box2:hover{
     box-shadow: none;
@@ -260,27 +363,47 @@ main .hr2{
     margin-top: 135px;
 }
 .flexbox{
-    background-color: rgb(6, 0, 35);
+    /* CHANGE IN COLOR */
+    background-color: #efe4aa;
     display: flex;
     height: 750px;
+}
+body.dark .flexbox{
+    background-color: rgb(6, 0, 35);
 }
 .flex-left{
     width: 50%;
 }
 .flex-top{
+    /* change in color */
+    color: black;
     font-size: 70px;
     font-weight: 400;
     padding-top: 60px;
     padding-left: 160px;
 }
+
 .sub-flex{
+    /* change in color */
+    color: black;
     margin-left: 35px;
     margin-top: 25px;
     font-size: 23px;
 }
 .sub-flex2{
+    /* change in color */
+    color: black;
     margin-left: 35px;
     margin-top: 15px;
+}
+body.dark .flex-top{
+    color: #fff;
+}
+body.dark .sub-flex{
+    color: #fff;
+}
+body.dark .sub-flex2{
+    color: #fff;
 }
 .flex-right{
     margin-top: 40px;
@@ -312,22 +435,32 @@ textarea::placeholder{
     margin-top: 35px;
     border-radius: 22px;
     font-size: 22px;
-    background-color: aqua;
+    background-color: #ebc922;
     font-weight: 500;
     cursor: pointer;
+}
+body.dark .flex-right button{
+    background-color: aqua;
 }
 .email img{
     margin-top: 80px;
     margin-left: 35px;
     width: 35px;
-    filter: invert(1);
+    /* filter: invert(1); */
 
 }
 .email a{
     margin-top: 80px;
     margin-left: 20px;
     font-size: 18px;
-    color: aqua;
+/* change in color */
+    color: black;
+}
+body.dark .email img{
+    filter: invert(1);
+}
+body.dark .email a{
+    color: #fff;
 }
 .email{
     display: flex;
@@ -340,25 +473,34 @@ textarea::placeholder{
 }
 .box2 .image{
     margin-left: 45px;
-    filter: invert(0);
+    filter: invert(1);
 }
 .icons img{
     margin-top: 30px;
     margin-left: 30px;
     width: 195px;
     cursor: pointer;
+    /* change */
+    filter: invert(0.6);
+}
+body.dark .icons img{
+    filter: invert(0);
 }
 .button1{
     font-size: 19px;
             font-weight: 600;
             padding: 10px 14px;
-            border: 3px solid rgb(5, 5, 116);
+            border: 3px solid #4d4002;
             border-radius: 20px;
-            background-color: aqua;
+            background-color: #ebc922;
             cursor: pointer;
             transition-duration: 0.4s;
             -webkit-transition-duration: 0.4s;
             display: inline-block;
+}
+body.dark .button1{
+    background-color: aqua;
+    border: 3px solid rgb(5, 5, 116);
 }
 .first-link a:hover, .second-link a:hover, .third-link ul li a:hover{
     color: rgb(121, 121, 121);

@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,6 +26,16 @@
                         <li><a href="#skill">Skills</a></li>
                         <li><a href="#project">Projects</a></li>
                         <li><a href="#contact">Contact</a></li>
+                        <li class="brightness-icon">
+                            <div>
+                                <input type="checkbox" name="checkbox" id="checkbox" class="checkbox">
+                                <label for="checkbox" class="label">
+                                    <i class="fa fa-moon-o"></i>
+                                    <i class="fa fa-sun-o"></i>
+                                    <div class="ball"></div>
+                                </label>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -39,19 +50,19 @@
                 <span id="element"></span>
 
                 <div class="button">
-                    <button><a href="Profile.pdf">Download Resume</a></button>
-                    <button>GithHub</button>
+                    <button><a href="Profile.pdf" download="Profile">Download Resume</a></button>
+                    <button><a href="https://github.com/Kumar2004-2009" target="_blank">Github</a></button>
                 </div>
             </div>
             
             <div class="rightsec">
-                <img src="bg.png" alt="">
+                <img src="images/bg.png" alt="">
             </div>
         </section>
         <hr>
         <section class="second" id="About me">
             <div class="leftimg"> 
-                <img src="profile.jpg" alt="">
+                <img src="images/profile.jpg" alt="">
             </div>
             <div class="rightcont">
                 About <span class="blue">Me</span>
@@ -70,14 +81,14 @@
                 <div class="container1">
 
                     <div class="box1">
-                        <img class="image2" src="java.png" alt="">
+                        <img class="image2" src="images/java.png" alt="">
                         <div class="heading">Java Programmer</div>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione rem eligendi hic, eum architecto error animi veniam! Omnis atque deserunt eveniet recusandae repudiandae!</p>
                         <button class="but1">Learn More</button>
                     </div>
 
                     <div class="box1">
-                        <img class="image" src="frontend-removebg-preview.png" alt="">
+                        <img class="image" src="images/frontend-removebg-preview.png" alt="">
                         <div class="heading size">Frontend Developer</div>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione rem eligendi hic, eum architecto error animi veniam! Omnis atque deserunt eveniet recusandae repudiandae!</p>
                         <button class="but1">Learn More</button>
@@ -128,16 +139,16 @@
                 <p class="sub-flex2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, facere sint. Fuga perspiciatis eligendi accusamus Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, enim?</p>
 
                 <div class="email">
-                    <img src="envelope_3916611.png" alt="">
+                    <img src="images/envelope_3916611.png" alt="">
                     <a href=https://mail.google.com/mail/?view=cm&fs=1&to=kumarpiyushxd@gmail.com>kumarpiyushxd@gmail.com</a>
                 </div>
 
                 <div class="email email2">
-                    <img src="phone-call_597177.png" alt="">
+                    <img src="images/phone-call_597177.png" alt="">
                     <a href="">8010222233</a>
                 </div>
                 <div class="icons">
-                    <img src="public-removebg-preview.png" alt="">
+                    <img src="images/public-removebg-preview.png" alt="">
                 </div>
                 
             </div>
@@ -189,5 +200,6 @@
           typeSpeed: 95,
         });
       </script>
+      <script src="script.js"></script>
 </body>
 </html>
