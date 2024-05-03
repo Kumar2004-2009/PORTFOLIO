@@ -215,8 +215,10 @@ body.dark .head{
 .container1{
     display: flex;
     gap: 40px;
+    justify-content: center;
 }
 .box1{
+
     margin-left: 55px;
     width: 23.3%;
     height: 550px;
@@ -238,7 +240,7 @@ body.dark .box1{
 }
         .head{
             margin-left: 800px;
-            margin-top: 85px;
+            margin-top: 45px;
             margin-bottom: 65px;
             font-size: 55px;
             font-weight: 600;
@@ -363,6 +365,7 @@ body.dark .heading a{
     margin-top: 135px;
 }
 .flexbox{
+    margin-top: 85px;
     /* CHANGE IN COLOR */
     background-color: #efe4aa;
     display: flex;
@@ -504,4 +507,35 @@ body.dark .button1{
 }
 .first-link a:hover, .second-link a:hover, .third-link ul li a:hover{
     color: rgb(121, 121, 121);
+}
+.box3{
+    margin-left: 55px;
+    width: 80.3%;
+    height: 690px;
+    background-color: #eed867;
+    border-radius: 13px;
+    transition: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    display: inline-block;
+    border: 5px solid #937c07;
+    color: black;
+    
+}
+.box3 img{
+    margin-top: 60px;
+    align-items: center;
+    width: 83%;
+    height: 370px;
+    margin-left: 70px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.box3 .heading{
+    margin-left:70px ;
+}
+.box3 p{
+    margin-left:70px ;
+}
+.box3 button{
+    margin-left: 70px;
 }
