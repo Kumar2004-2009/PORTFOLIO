@@ -416,6 +416,7 @@ body.dark .sub-flex2{
     flex-direction: column;
 }
 .name{
+    color: white;
     margin-top: 30px;
     margin-bottom: -18px;
     padding-top: 15px;
@@ -481,7 +482,7 @@ body.dark .email a{
     filter: invert(1);
 }
 .icons img{
-    margin-top: 30px;
+    margin-top: 2px;
     margin-left: 30px;
     width: 195px;
     cursor: pointer;
@@ -662,4 +663,22 @@ body.dark .card span{
 }
 .hr3{
     margin-top: 140px;
+}
+.linkedin img{
+    margin-top: 18px;
+    margin-left: 35px;
+    width: 35px;
+    filter: invert(1);
+}
+body.dark .linkedin img{
+    filter: invert(0);
+}
+.linkedin a{
+    margin-left: 20px;
+    font-size: 18px;
+/* change in color */
+    color: black;
+}
+body.dark .linkedin a{
+    color: white;
 }
