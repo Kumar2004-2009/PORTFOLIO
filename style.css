@@ -196,12 +196,12 @@ body.dark .rightcont{
     margin-bottom: 18px;
 }
 main hr{
-    margin-top: 170px;
+    margin-top: 150px;
     margin-left: 25px;
     margin-right: 25px;
 }
 main .hr2{
-    margin-top: 135px;
+    margin-top: 125px;
     margin-left: 25px;
     margin-right: 25px;
 }
@@ -222,12 +222,12 @@ body.dark .head{
     margin-left: 55px;
     width: 23.3%;
     height: 550px;
-    background-color: #eed867;
+    background-color: #fffefe;
     border-radius: 13px;
     transition: 0.4s;
     -webkit-transition-duration: 0.4s;
     display: inline-block;
-    border: 5px solid #937c07;
+    border: 5px solid grey;
     color: black;
 }
 body.dark .box1{
@@ -235,20 +235,22 @@ body.dark .box1{
     color: #fff;
     border: 5px solid rgb(33, 33, 144);
 }
-.box1:hover{
-    box-shadow: 7px 7px 6px white, 4px 4px 5px white inset;
-}
+
         .head{
-            margin-left: 800px;
-            margin-top: 45px;
-            margin-bottom: 65px;
+            text-decoration: underline;
+            margin-left: 720px;
+            margin-top: 20px;
+            margin-bottom: 120px;
             font-size: 55px;
             font-weight: 600;
         }
         .conatiner{
-            margin: 40px 25px;
+            margin-top: 60px;
+            margin-left: 25px;
+            margin-right: 25px;
             width: 1700px;
-            height: 750px;
+            height: 700px;
+            margin-bottom: 260px;
         }
         .box1 img{
             width: 100px;
@@ -274,10 +276,11 @@ body.dark .box1{
             font-size: 19px;
             font-weight: 600;
             padding: 10px 14px;
-            border: 3px solid #4d4002;
+            border: 3px solid gray;
             border-radius: 20px;
-            background-color: #f9d20c;
+            background-color: rgb(3, 3, 78);
             cursor: pointer;
+            color: white;
             transition-duration: 0.4s;
             -webkit-transition-duration: 0.4s;
             display: inline-block;
@@ -286,6 +289,7 @@ body.dark .box1{
         body.dark .but1{
             background-color: aqua;
             border: 3px solid rgb(5, 5, 116);
+            color: black;
         }
         .but1:hover{
             box-shadow: 2px 3px 7px #917f2a ;
@@ -294,8 +298,7 @@ body.dark .box1{
             box-shadow: 2px 3px 7px aqua ;
         }
         .box1 .image{
-            filter: invert(1);
-            width: 140px;
+            width: 130px;
         }
         .box1 .image2{
             width:70px;
@@ -365,7 +368,6 @@ body.dark .heading a{
     margin-top: 135px;
 }
 .flexbox{
-    margin-top: 85px;
     /* CHANGE IN COLOR */
     background-color: #efe4aa;
     display: flex;
@@ -493,49 +495,171 @@ body.dark .icons img{
     font-size: 19px;
             font-weight: 600;
             padding: 10px 14px;
-            border: 3px solid #4d4002;
+            border: 3px solid gray;
             border-radius: 20px;
-            background-color: #ebc922;
+            background-color: rgb(3, 3, 78);
             cursor: pointer;
             transition-duration: 0.4s;
             -webkit-transition-duration: 0.4s;
             display: inline-block;
+            color: white;
 }
 body.dark .button1{
     background-color: aqua;
     border: 3px solid rgb(5, 5, 116);
+    color: black;
 }
 .first-link a:hover, .second-link a:hover, .third-link ul li a:hover{
     color: rgb(121, 121, 121);
 }
-.box3{
-    margin-left: 55px;
-    width: 80.3%;
-    height: 690px;
-    background-color: #eed867;
-    border-radius: 13px;
-    transition: 0.4s;
-    -webkit-transition-duration: 0.4s;
-    display: inline-block;
-    border: 5px solid #937c07;
+
+.box1 .image3{
+    width: 70px;
+}
+ 
+
+.wrapper { 
+    height: 100px;
+    margin-left: 30px;
+	max-width: 1700px; 
+	width: 100%; 
+	position: relative;
+
+} 
+
+.wrapper i { 
+	height: 50px; 
+	width: 50px; 
+	background: rgb(118, 233, 118); 
+	text-align: center; 
+	line-height: 50px; 
+	border-radius: 50%; 
+	cursor: pointer; 
+	position: absolute; 
+	top: 290%; 
+	font-size: 1.25 rem; 
+	transform: translateY(-50%); 
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23); 
+
+} 
+
+.wrapper i:first-child { 
+	left: -22px; 
+
+} 
+
+.wrapper i:last-child { 
+	right: -22px; 
+
+} 
+
+.wrapper .carousel { 
+	display: grid; 
+	grid-auto-flow: column; 
+	grid-auto-columns: calc((100% / 3) - 12px); 
+	gap: 16px; 
+	overflow-x: auto; 
+	scroll-snap-type: x mandatory; 
+	scroll-behavior: smooth; 
+	scrollbar-width: 0; 
+} 
+
+.carousel::-webkit-scrollbar { 
+	display: none; 
+} 
+
+.carousel :where(.card, .img) { 
+	display: flex; 
+	align-items: center; 
+	justify-content: center; 
+} 
+
+.carousel.dragging { 
+	scroll-snap-type: none; 
+	scroll-behavior: auto; 
+} 
+
+.carousel.no-transition { 
+	scroll-behavior: auto; 
+} 
+
+.carousel.dragging .card { 
+	cursor: grab; 
+	user-select: none; 
+} 
+
+.carousel .card { 
+	scroll-snap-align: start; 
+	height: 590px; 
+	list-style: none; 
+	background: #fffefe; 
+	border-radius: 8px; 
+	display: flex; 
+	cursor: pointer; 
+	width: 98%; 
+	padding-bottom: 15px; 
+	align-items: center; 
+	justify-content: center; 
+	flex-direction: column; 
+    border: 4px solid grey;
+} 
+body.dark .carousel .card{
+    background-color: rgb(7, 2, 43);
+    color: #fff;
+    border: 5px solid rgb(33, 33, 144);
+}
+
+.card .img {  
+	width: 375px; 
+	height: 375px; 
+	border-radius: 50%; 
+
+} 
+
+.card .img img { 
+	width: 300px; 
+	height: 300px; 
+	object-fit: cover; 
+	border-radius: 50%; 
+	border: 4px solid #fff; 
+} 
+body.dark .card .img img{
+    border: 4px solid aqua;
+}
+
+.card h2 a{ 
+	font-weight: 600; 
+	font-size: 2.1rem; 
+	margin: 30px 0 5px; 
     color: black;
-    
+} 
+body.dark .card h2 a{
+    color: #FFF;
 }
-.box3 img{
-    margin-top: 60px;
-    align-items: center;
-    width: 83%;
-    height: 370px;
-    margin-left: 70px;
-    border-radius: 10px;
-    margin-bottom: 15px;
+.card span { 
+	color: #5c606f; 
+	font-size: 1.21rem; 
+    text-align: center;
+    margin: 5px 15px;
+
 }
-.box3 .heading{
-    margin-left:70px ;
+body.dark .card span{
+    color: #FFF;
+} 
+
+@media screen and (max-width: 900px) { 
+	.wrapper .carousel { 
+		grid-auto-columns: calc((100% / 2) - 9px); 
+
+	} 
+} 
+
+@media screen and (max-width: 600px) { 
+	.wrapper .carousel { 
+		grid-auto-columns: 100%; 
+
+	} 
 }
-.box3 p{
-    margin-left:70px ;
-}
-.box3 button{
-    margin-left: 70px;
+.hr3{
+    margin-top: 140px;
 }

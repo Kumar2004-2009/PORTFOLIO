@@ -3,61 +3,83 @@ checkbox.addEventListener('change', ()=>{
     document.body.classList.toggle('dark');
 })
 
+document.addEventListener("DOMContentLoaded", function() { 
+	const carousel = document.querySelector(".carousel"); 
+	const arrowBtns = document.querySelectorAll(".wrapper i"); 
+	const wrapper = document.querySelector(".wrapper"); 
 
-(function () {
-    const customerImage = document.querySelector('#projectImage')
-    const customerName= document.querySelector('#heading')
-    const customerText= document.querySelector('#project-Text')
+	const firstCard = carousel.querySelector(".card"); 
+	const firstCardWidth = firstCard.offsetWidth; 
 
-    const btn = document.querySelectorAll('.btn');
+	let isDragging = false, 
+		startX, 
+		startScrollLeft, 
+		timeoutId; 
 
-    let index=0;
-    const customers = [];
+	const dragStart = (e) => { 
+		isDragging = true; 
+		carousel.classList.add("dragging"); 
+		startX = e.pageX; 
+		startScrollLeft = carousel.scrollLeft; 
+	}; 
 
-    function Customer(img, name, text) {
-        this.img=img;
-        this.name=name;
-        this.text=text;
-    }
+	const dragging = (e) => { 
+		if (!isDragging) return; 
+	
+		// Calculate the new scroll position 
+		const newScrollLeft = startScrollLeft - (e.pageX - startX); 
+	
+		// Check if the new scroll position exceeds 
+		// the carousel boundaries 
+		if (newScrollLeft <= 0 || newScrollLeft >= 
+			carousel.scrollWidth - carousel.offsetWidth) { 
+			
+			// If so, prevent further dragging 
+			isDragging = false; 
+			return; 
+		} 
+	
+		// Otherwise, update the scroll position of the carousel 
+		carousel.scrollLeft = newScrollLeft; 
+	}; 
 
-    function createCustomer(img, name, text) {
-        let Img =`./img/${img}.png`;
-        let customer = new Customer(Img , name ,text);
+	const dragStop = () => { 
+		isDragging = false; 
+		carousel.classList.remove("dragging"); 
+	}; 
 
-        customers.push(customer);
-    }
- 
-    createCustomer(0 , 'Ethan Blackwood', '"Triangle has been a game-changer for our business. Their innovative solutions have helped us increase efficiency and reduce costs." (Reframe: "Triangles cutting-edge approach has revolutionized our operations, resulting in significant productivity gains and expense reductions.")'); 
+	const autoPlay = () => { 
+	
+		// Return if window is smaller than 800 
+		if (window.innerWidth < 800) return; 
+		
+		// Calculate the total width of all cards 
+		const totalCardWidth = carousel.scrollWidth; 
+		
+		// Calculate the maximum scroll position 
+		const maxScrollLeft = totalCardWidth - carousel.offsetWidth; 
+		
+		// If the carousel is at the end, stop autoplay 
+		if (carousel.scrollLeft >= maxScrollLeft) return; 
+		
+		// Autoplay the carousel after every 2500ms 
+		timeoutId = setTimeout(() => 
+			carousel.scrollLeft += firstCardWidth, 2500); 
+	}; 
 
-    createCustomer(1 , 'Julian Morales', 'The team at Triangle is incredibly knowledgeable and responsive. They have helped us navigate complex challenges and achieve our goals." (Reframe: "Triangles expert guidance and proactive support have been instrumental in our success, enabling us to overcome obstacles and drive results.');
+	carousel.addEventListener("mousedown", dragStart); 
+	carousel.addEventListener("mousemove", dragging); 
+	document.addEventListener("mouseup", dragStop); 
+	wrapper.addEventListener("mouseenter", () => 
+		clearTimeout(timeoutId)); 
+	wrapper.addEventListener("mouseleave", autoPlay); 
 
-    createCustomer(2 , 'Lila Flynn', 'Triangles unique perspective has helped us identify and capitalize on new opportunities. We were grateful for their partnership.Reframe:Triangles fresh insights and collaborative approach have uncovered new avenues for growth and success, and we value their ongoing support and expertise.'); 
-
-    createCustomer(3 , 'Ava Morales', '"Triangle has helped us streamline our processes and improve overall performance. We were impressed with their expertise and commitment to our success." (Reframe: "Triangles process optimization expertise has transformed our organization, resulting in enhanced productivity, efficiency, and overall excellence.")'); 
-
-    
-
-    btn.forEach(function(button) {
-        button.addEventListener('click', function(e) {
-            if(e.target.parentElement.classList.contains('prevBtn')) {
-                if(index === 0) {
-                    index = customers.length
-                }
-                index--;
-                customerImage.src = customers[index].img
-                customerName.textContent = customers[index].name
-                customerText.textContent = customers[index].text
-            }
-
-            if(e.target.parentElement.classList.contains('nextBtn')) {
-                index++;
-                if(index === customers.length) {
-                    index = 0
-                }
-                customerImage.src=customers[index].img
-                customerName.textContent=customers[index].name
-                customerText.textContent=customers[index].text
-            }
-        })
-    });
-})()
+	// Add event listeners for the arrow buttons to 
+	// scroll the carousel left and right 
+	arrowBtns.forEach(btn => { 
+		btn.addEventListener("click", () => { 
+			carousel.scrollLeft += btn.id === "left" ? 
+				-firstCardWidth : firstCardWidth; 
+		}); 
+	}); 
+}); 
